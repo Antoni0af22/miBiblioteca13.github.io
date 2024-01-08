@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
-import { getFirestore, collection, getDocs, onSnapshot, addDoc, deleteDoc, doc, getDoc, updateDoc,} from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
+import { getFirestore, collection, getDocs, onSnapshot, addDoc, deleteDoc, doc, getDoc, updateDoc,} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAungT1_1YwJaX5Gt8X8Sm7BOqCftrlrHw",
@@ -25,6 +25,10 @@ export const onGetLibros = (callback) =>
     onSnapshot(collection(db,'libros'),callback);
 
 //borrar
+/**
+ *
+ * @param {string} id Task ID
+ */
 export const deleteLibro = (id) => deleteDoc(doc(db, "libros", id));
 
 export const getLibro = (id) => getDoc(doc(db, "libros", id));
