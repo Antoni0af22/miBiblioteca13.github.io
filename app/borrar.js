@@ -1,9 +1,4 @@
-import {
-    onGetLibross,
-    deleteLibros,
-    getLibro,
-    getLibros,
-  } from "./firebase.js";    
+import {onGetLibros, deleteLibros, getLibro, getLibros } from "./firebase.js";    
 
   const iibrossContainer = document.getElementById("libros-container");
   
