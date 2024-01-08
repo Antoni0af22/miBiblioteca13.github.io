@@ -3,13 +3,9 @@ import {
     deleteLibros,
     getLibro,
     getLibros,
-  } from "./firebase.js";
-import {librosForm}  from "./agreagar.js";
-    
+  } from "./firebase.js";    
+
   const iibrossContainer = document.getElementById("libros-container");
-  
-  let editStatus = false;
-  let id = "";
   
   window.addEventListener("DOMContentLoaded", async (e) => {
     // const querySnapshot = await getTasks();
